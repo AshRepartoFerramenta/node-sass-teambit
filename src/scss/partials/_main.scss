@@ -1,0 +1,188 @@
+main {
+  border-top: 2px solid $text_primary_color;
+
+  & > section{
+    padding: 60px 0;
+  }
+
+  .jumbotron {
+    @include container;
+    @include flex;
+    padding: 70px 0;
+
+    h3{
+      padding-top: 10px;
+      padding-bottom: 70px;
+    }
+
+    &-text, &-img {
+      width: 50%;
+
+      @media all and (max-width: 767px) {
+        width: 100%;
+      }
+    }
+
+    &-text{
+      @include signUp;
+    }
+
+    &-img{
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+  .traditionalPeople {
+    background-color: $background_primary_color;
+    text-align: center;
+    font-size: 20px;
+
+    [class*="tP-section-"]{
+      @include container;
+
+      h2 {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .tP-flex {
+        @include flex;
+        flex-wrap: wrap;
+      }
+
+      .tP-element {
+        width: calc(100% / 3);
+        padding-top: 60px;
+        @media all and (max-width: 767px) {
+          width: 100%;
+        }
+
+        img {
+          height: 170px;
+          padding-bottom: 20px;
+        }
+      }
+
+      .tP-elementBig {
+        width: 100%;
+        padding: 150px 0;
+
+        img {
+          height: 450px;
+        }
+      }
+    }
+
+    @for $i from 1 through 1 {
+      .tP-section-#{$i}{
+        border-bottom: 2px solid $text_primary_color;
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  .previewScreenshot {
+    .pS-flex {
+      @include flex;
+
+      & > div {
+        width: 50%;
+        @media all and (max-width: 767px) {
+          width: 100%
+        }
+
+        h3{
+          padding-top: 50px;
+          padding-bottom: 40px;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .pS-text {
+        width: 25%;
+        @media all and (max-width: 767px) {
+          width: 100%
+        }
+
+        a{
+          color: $text_secondary_color;
+        }
+
+        img {
+          padding: 40px 0;
+
+        }
+      }
+    }
+
+    & .reverse {
+      flex-direction: row-reverse;
+      @media all and (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .signUp {
+    background-color: $background_primary_color;
+    text-align: center;
+
+    & > h2, & > div{
+      max-width: 710px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 60px;
+      line-height: 85px;
+      @media all and (max-width: 767px) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+    }
+
+    .sU-box {
+      position: relative;
+      background-color: $background_secondary_color;
+      padding: 20px;
+      margin: 70px auto;
+      border: 2px solid $button_primary_color;
+      border-radius: 10px;
+      text-align: left;
+
+      & > p{
+        padding-bottom: 25px;
+      }
+
+      i{
+        position: absolute;
+        top: -27px;
+        left: -2px;
+        font-size: 50px;
+        color: $button_primary_color;
+      }
+
+      .sU-box-founders {
+        display: flex;
+        align-items: center;
+
+        img {
+          padding-right: 20px;
+        }
+
+        span{
+          color: $text_secondary_color;
+        }
+      }
+    }
+
+    .sU-signUp {
+      @include signUp;
+    }
+  }
+}

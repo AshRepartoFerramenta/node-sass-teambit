@@ -1,0 +1,92 @@
+.navbar {
+  position: relative;
+  @include container;
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 10px;
+  @media all and (max-width: 767px) {
+    flex-direction: row;
+  }
+
+  .navbar-logo{
+    img {
+      width: 150px;
+    }
+  }
+
+  .navbar-nav{
+    li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .navbar-nav-button {
+      a{
+        @include button-primary;
+      }
+
+      img{
+        @include button-img;
+      }
+    }
+  }
+
+  .navbar-hamburger{
+    display: none;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    i{
+      font-size: 35px;
+    }
+
+    .hamburger.hidden, .close.hidden{
+      display: none;
+    }
+  }
+
+  @media all and (max-width: 767px) {
+    .navbar-nav{
+      display: none;
+    }
+
+    .navbar-hamburger{
+      display: block;
+    }
+  }
+}
+
+.header-hamburgerMenu {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  margin-top: 80px;
+  padding: 20px;
+  background-color: $background_secondary_color;
+  box-shadow: 0px 0px 4px #000000;
+  @include signUp;
+  @media all and (max-width: 767px) {
+    text-align: left;
+  }
+
+  li{
+    padding-bottom: 15px;
+  }
+
+  div {
+    a{
+      width: 100%;
+      text-align: center;
+      background-color: $text_tertiary_color;
+      color: $text_secondary_color;
+      border: 2px solid $text_secondary_color;
+    }
+  }
+}

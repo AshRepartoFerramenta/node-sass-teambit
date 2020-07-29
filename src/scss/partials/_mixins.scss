@@ -1,0 +1,39 @@
+@mixin flex{
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  @media all and (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+@mixin container{
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+@mixin button-img{
+  vertical-align: bottom;
+  width: 28px;
+}
+
+@mixin button-primary{
+  background-color: $button_primary_color;
+  color: $text_tertiary_color;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+@mixin signUp{
+  div{
+    margin-bottom: 30px;
+
+    a{
+      @include button-primary;
+
+      img{
+        @include button-img;
+      }
+    }
+  }
+}

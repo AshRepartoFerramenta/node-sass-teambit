@@ -1,0 +1,79 @@
+/* Generali */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: $text_primary_color;
+  @media all and (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+  color: $text_primary_color;
+  @media all and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+p {
+  font-size: 20px;
+  font-weight: 800;
+  @media all and (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  font-size: 68px;
+  font-weight: 800;
+  @media all and (max-width: 767px) {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 50px;
+  @media all and (max-width: 767px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 50px;
+  @media all and (max-width: 767px) {
+    font-size: 22px;
+    line-height: 40px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+/* fine generali */
+
+/* versione mobile */
+@media all and (max-width: 767px) {
+  span {
+    display: block;
+  }
+}
+/* fine versione mobile */
